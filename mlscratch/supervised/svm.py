@@ -67,7 +67,13 @@ class SVM:
         self.y_train_ = None
     
     def _get_gamma(self, X):
-        """Compute gamma based on the input data."""
+        """Compute gamma based on the input data.
+        - small gamma : smoother decision boundary
+        - large gamma : more complex and tighter decision boundary
+
+        gamma = 1/(no. of features * variance of X)
+            - tolerance 1e-9 is added to avoid division by 0.
+        """
         if self.gamma == 'scale':
             return 1.0 / (X.shape[1] * (X.var() + 1e-9))
         elif self.gamma == 'auto':
@@ -77,8 +83,14 @@ class SVM:
     def _kernel(self, X1, X2):
         """Compute the kernel matrix between X1 and X2."""
         if self.kernel == 'linear':
+            """
+            K(x,x)=x⊤ . x′
+            """
             return np.dot(X1, X2.T)
         elif self.kernel == 'poly':
+            """
+            K(x,x′)=(γ⋅x⊤x′ +coef0)**d
+            """
             return (self._gamma * np.dot(X1, X2.T) + self.coef0) ** self.degree
         elif self.kernel == 'rbf':
             # Using broadcasting to compute pairwise squared Euclidean distances
@@ -103,10 +115,14 @@ class SVM:
             
             for i in range(n_samples):
                 # Compute model output
+
+                # prediction
                 f_i = np.sum(alpha * y * K[i]) + b
-                
-                # Check KKT conditions
+    
+                # error
                 E_i = f_i - y[i]
+
+                # Karush-Kuhn-Tucker (KKT) condition.
                 kkt_i = y[i] * E_i
                 
                 if (kkt_i < -self.tol and alpha[i] < self.C) or \
