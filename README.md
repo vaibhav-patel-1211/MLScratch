@@ -5,6 +5,7 @@ About The Project
 MLScratch is a Python library that provides simple and clear implementations of common machine learning algorithms and tools. The goal of this project is to create a library that is easy to understand, modify, and use for learning and building your own ML models.
 
 Installation
+
 There are two ways to install MLScratch:
 1. Install from PyPI
 You can install the library directly from PyPI using pip:
@@ -17,12 +18,16 @@ cd MLScratch
 pip install .
 
 Contributing
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
  * Fork the Project
  * Create your Feature Branch (git checkout -b feature/AmazingFeature)
  * Commit your Changes (git commit -m 'Add some AmazingFeature')
  * Push to the Branch (git push origin feature/AmazingFeature)
  * Open a Pull Request.
+
 Contact
+
  vaibhav1211patel@gmail.com
+
 Project Link: https://github.com/vaibhav-patel-1211/MLScratch
