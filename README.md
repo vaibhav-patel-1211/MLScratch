@@ -3,13 +3,6 @@
 A machine learning library built from scratch. This project is for educational purposes to understand the inner workings of various ML algorithms.
 About The Project
 MLScratch is a Python library that provides simple and clear implementations of common machine learning algorithms and tools. The goal of this project is to create a library that is easy to understand, modify, and use for learning and building your own ML models.
-Built With
- * Python
-Getting Started
-To get a local copy up and running follow these simple steps.
-Prerequisites
-You'll need to have Python 3.x installed on your system. You can check your Python version by running:
-python --version
 
 Installation
 There are two ways to install MLScratch:
