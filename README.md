@@ -1,8 +1,4 @@
 # mlscratchlib
-Of course! Here is a professional and comprehensive README file for your "MLScratch" project. I have also included a detailed explanation of the usage syntax to help you and other users understand how to use your library.
-Since I couldn't access the GitHub repository or find the library on PyPI, I've created a template that you can easily adapt to your project. I've made some assumptions based on the name "MLScratch," so feel free to modify the content to perfectly match your library's features.
-MLScratch
-
 
 A machine learning library built from scratch. This project is for educational purposes to understand the inner workings of various ML algorithms.
 About The Project
